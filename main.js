@@ -16,16 +16,7 @@ function selector() {
 
 }
 
-// This function is  condition to check value is right then execute;
-function footerHindiSelector() {
-  btnfooterHindi.addEventListener('change', () => {
-    if (btnfooterHindi.value === "hindi") {
-      allPages()
-    } else {
-      pageReload()
-    }
-  })
-}
+
 
 // This function is hold the execution function 
 function allPages() {
@@ -221,4 +212,3 @@ function hindiLangThirdPage() {
 
 // button event and function
 btnHindi.addEventListener('click', selector);
-btnfooterHindi.addEventListener('click', footerHindiSelector)
