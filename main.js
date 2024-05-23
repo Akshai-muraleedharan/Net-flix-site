@@ -44,7 +44,7 @@ function inputWarning() {
         if (btnVal && btnIndexVal === 0) {
           if (userval.value === "" && inputIndex === 0) {
             warnSign.textContent = "Email or mobile number is required.";
-             userval.style.border ="1px solid red"
+             userval.style.border ="2px solid red"
 
             if (btnHindi.value === "hindi") {
               warnSign.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है."
@@ -80,12 +80,12 @@ function inputWarning() {
             
             if (userval.value === "" && inputIndex === 1) {
               warnSign2.textContent = "Email or mobile number is required."
-              userval.style.border ="1px solid red"
+              userval.style.border ="2px solid red"
 
               if (btnHindi.value === "hindi") {
                 warnSign2.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है."
                 warnSign2.style.marginRight = "53%"
-                userval.style.border ="1px solid red"
+                
                 
               }
 
@@ -94,6 +94,7 @@ function inputWarning() {
                 warnId.style.color = "red";
                 warnId.style.fontSize = "14px";
                 warnId.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है.";
+                
 
               } else {
                 warnId.style.color = "red"
