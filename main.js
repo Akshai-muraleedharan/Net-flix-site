@@ -61,6 +61,9 @@ function inputWarning() {
               warnId2.textContent = "Email or mobile number is required."
               warnId2.style.color = "red"
               warnId2.style.fontSize = "14px"
+              warnId2.style.display="flex"
+              warnId2.style.marginLeft ="5%"
+              
             }
 
 
