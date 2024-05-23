@@ -33,7 +33,7 @@
 }
 
 header {
-    padding: 30px;
+    padding: 30px 25px 30px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,6 +105,18 @@ header {
 
 }
 
+/* input warning */ 
+.content-wrapper .warning{
+    font-size: 14px;
+    margin-right: 40%;
+    color: rgb(235, 57, 66);
+}
+
+
+
+
+
+
 .content-wrapper input::placeholder {
     color: gray;
 
@@ -132,13 +144,13 @@ header {
     }
 
     .nav-sele-btn select {
-        padding: 2px;
+        padding: 4px;
         border: 1px solid;
         border-radius: 2px;
     }
 
     .nav-sele-btn button {
-        padding: 2px 4px;
+        padding: 4px 7px;
         border-radius: 2px;
     }
 
@@ -163,12 +175,22 @@ header {
     .content-wrapper input {
         width: 90%;
     }
+    
 
     .content-wrapper button {
         padding: 9px 10px;
         margin-top: 15px;
     }
+    .warning{
+        display: none;
+    }
 
+}
+
+@media screen and (min-width: 767px){
+    .warn2-dis-none{
+        display: none;
+    }
 }
 
 /* header area end here */
@@ -519,6 +541,11 @@ header {
 }
 
 /* The code wriiten by Aksahi Muraleedharan on 22-05-24*/
+.warning2{
+    font-size: 14px;
+    margin-right: 60%;
+    color: rgb(235, 57, 66);
+}
 .accordion-area-wrapper h3 {
     color: var(--text-color);
     font-size: 18px;
@@ -527,7 +554,7 @@ header {
 }
 
 .accordion-area-wrapper input {
-    width: 40%;
+    width: 60%;
     padding: 11px 0px 17px 10px;
     background-color: transparent;
     border: 1px solid gray;
@@ -554,6 +581,14 @@ header {
     justify-content: center;
 }
 
+
+@media screen and (min-width: 768px){
+    .warn2-di{
+        display: none;
+    }
+}
+
+
 @media screen and (max-width: 767px) {
     .accordion-input-btn {
         display: flex;
@@ -564,13 +599,17 @@ header {
 
     .accordion-area-wrapper input {
         width: 100%;
-        margin-bottom: 20px;
+       
     }
 
     .accordion-area-wrapper button {
         margin-left: 10%;
         padding: 10px 20px;
         width: 80%;
+        margin-top: 15px;
+    }
+    .warning2{
+        display: none;
     }
 }
 

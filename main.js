@@ -1,16 +1,125 @@
 
 // The two querySelectors are taked from html select
 let btnHindi = document.querySelector('#plan')
-let btnfooterHindi = document.querySelector('#footer-selector');
+let btnSign = document.querySelectorAll('.btn-warnig')
+let inputWarn = document.querySelectorAll('.input-warn')
+let warnSign = document.querySelector('.warning')
+let warnSign2 = document.querySelector('.warning2')
+let warnId2 = document.getElementById('warning1');
+let warnId = document.getElementById('warning2');
+let warnScreen = screen.width;
+
+
+function inputWarning() {
+
+  if (btnHindi.value === "hindi" || warnScreen < 767) {
+    warnSign.textContent = "";
+    warnId2.textContent = "";
+    warnId .textContent ="";
+    warnSign2.textContent = "";
+  }
+
+
+
+
+  for (const [inputIndex, inputVal] of inputWarn.entries())
+
+
+
+
+    btnSign.forEach((btnItem, btnIndex) => {
+      let btnVal = btnItem;
+      let btnIndexVal = btnIndex;
+
+      let userval = inputVal;
+
+
+
+
+
+      btnVal.addEventListener("click", () => {
+        if (btnVal && btnIndexVal === 0) {
+          if (userval.value === "" && inputIndex === 0) {
+            warnSign.textContent = "Email or mobile number is required.";
+
+
+            if (btnHindi.value === "hindi") {
+              warnSign.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है."
+              warnSign.style.marginRight = "35%"
+
+            }
+
+
+
+            if (btnHindi.value === "hindi" && screenWidth < 767) {
+              warnId2.style.color = "red"
+              warnId2.style.fontSize = "14px"
+              warnId2.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है."
+
+
+            } else {
+              warnId2.textContent = "Email or mobile number is required."
+              warnId2.style.color = "red"
+              warnId2.style.fontSize = "14px"
+            }
+
+
+
+
+          }
+
+        } else if (btnVal && btnIndexVal === 1) {
+          if (userval.value === "" && btnIndexVal === 1) {
+            if (userval.value === "" && inputIndex === 1) {
+              warnSign2.textContent = "Email or mobile number is required."
+
+              if (btnHindi.value === "hindi") {
+                warnSign2.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है."
+                warnSign2.style.marginRight = "53%"
+
+              }
+
+              if (btnHindi.value === "hindi" && screenWidth < 767) {
+
+                warnId.style.color = "red";
+                warnId.style.fontSize = "14px";
+                warnId.textContent = "ईमेल या मोबाइल नंबर डालना ज़रूरी है.";
+
+              } else {
+                warnId.style.color = "red"
+                warnId.style.fontSize = "14px"
+                warnId.textContent = "Email or mobile number is required."
+              }
+
+
+
+
+            }
+
+          }
+        }
+      })
+    })
+
+
+
+
+
+}
+
+inputWarning()
+
 
 // This function is  condition to check value is right then execute;
 function selector() {
   btnHindi.addEventListener('change', () => {
     if (btnHindi.value === "hindi") {
       allPages()
+
       console.log("hindi selected");
     } else {
       pageReload()
+
     }
   })
 
@@ -27,6 +136,7 @@ function allPages() {
   hindiLangFifthPage();
   hindiLangSixthPage();
   hindiLangSeventhPage();
+  inputWarning()
 }
 
 // This function is to reload the page when the user select english option
@@ -91,7 +201,7 @@ function hindiLangThirdPage() {
 }
 
 // This hindiLangFourthPage() function is to change innerText of  html section4 
-  function hindiLangFourthPage() {
+function hindiLangFourthPage() {
   let fourthH1 = document.getElementById('fourth-h1')
   let fourthp = document.getElementById('fourth-p')
 
@@ -105,7 +215,7 @@ function hindiLangThirdPage() {
 }
 
 // This hindiLangFifthPage() function is to change innerText of  html section5 
-  function hindiLangFifthPage() {
+function hindiLangFifthPage() {
   let fifthH1 = document.getElementById('fifth-h1');
   let fifthP = document.getElementById('fifth-p');
   let kidsPic = document.getElementById('kid-pic')
@@ -119,7 +229,7 @@ function hindiLangThirdPage() {
 }
 
 // This hindiLangSixthPage() function is to change innerText of  html section6 accordion
-  function hindiLangSixthPage() {
+function hindiLangSixthPage() {
   let sixthH1 = document.getElementById('sixth-h1');
   let sixthH3 = document.getElementById('sixth-h3');
   let sixthInputEle = document.getElementById('sixth-input-el')
@@ -160,9 +270,10 @@ function hindiLangThirdPage() {
   sixBtnEl.style.fontWeight = "400";
   sixBtnEl.style.fontSize = "20px"
 
-   if (screenWidth < 767) {
-
-    sixthH3.style.fontSize = "16px"
+  if (screenWidth < 767) {
+    sixBtnEl.style.width = "55%";
+    sixBtnEl.style.margin = "10px auto 0px auto"
+    sixthH3.style.fontSize = "16px";
     // The loop used for to change font size of accordion
     for (let i = 0; i < accordionText.length; i++) {
       let arrayClass = accordionText[i];
@@ -178,7 +289,7 @@ function hindiLangThirdPage() {
 }
 
 // This hindiLangSeventhPage() function is to change innerText of  html section7
-  function hindiLangSeventhPage() {
+function hindiLangSeventhPage() {
 
   let netflixChanger = document.getElementById('netflix-hindi')
   let cont = document.getElementById('footer_list');
